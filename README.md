@@ -1,40 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# [GabLinks(Link)](https://site-blog-bay.vercel.app/blog)
 
-## Getting Started
+DevLinks é um agregador de links responsivo e com troca de tema que você pode usar como cartão de visitas nas suas redes sociais.
+Esse é um dos desafios práticos da formação de Next, um dos conteúdos disponíveis para alunos da Rocketseat. (O layout não esta igual porque eu ja aproveitei e usei esse projeto para ser a minha cnetral de links😁)
 
-First, run the development server:
+## 🎨 Layout
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+O layout da aplicação está disponível no Figma:
+
+<a href="https://www.figma.com/design/od0i5pIqCrWnwRhoxlIbtN/DevLinks-•-Next.js--Community-?node-id=3602-624&t=RxsQ7kyi6EPpTNzN-0">
+  <img alt="Demonstração do projeto" src="./public/og-image.jpg">
+</a>
+
+## 🚀 Começando
+
+Estas instruções permitirão que você obtenha uma cópia do projeto funcionando em sua máquina para desenvolvimento e testes.
+
+## 🔧 Instalação
+
+### Pré-requisitos
+
+Antes de começar, você precisará ter a seguinte ferramenta instalada em sua máquina:
+[VSCode](https://code.visualstudio.com/)
+
+Dentro do terminal do VSCode, escreva o seguinte código:
+
+```
+git init
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```
+git clone https://github.com/Gabrielingnau/site-blog.git
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Instale as depêndecias com:
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```
+npm install
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Depois é só rodar o projeto com:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+npm run dev
+```
 
-## Learn More
+## 🛠️ Tecnologias
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js](https://nextjs.org) - Biblioteca para interfaces de usuário
+- [ShadcnUi](https://ui.shadcn.com) - Um conjunto de componentes lindamente projetados
+- [Tailwindcss](https://tailwindcss.com) - Uma estrutura CSS de utilidade-first com classes
+- [Typescript](https://www.typescriptlang.org/) - Sintaxe para tipos
+- [Prismic](https://prismic.io) - CMS headless com conteúdo via API.
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+# ⌨️ com ❤️ por [Gabriel Lingnau](https://www.linkedin.com/in/gabriel-lingnau-3bb17b266/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+=======
