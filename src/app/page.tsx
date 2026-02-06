@@ -1,61 +1,36 @@
-import { Github, Instagram, Linkedin, Youtube } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { createClient } from "@/lib/prismicio";
+import { asLink } from "@prismicio/client";
+import { CMSIcon } from "@/components/icons";
+import { Avatar } from "@/components/avatar";
+import { Footer } from "@/components/footer";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const client = createClient();
+  const page = await client.getSingle("index");
+  console.log(JSON.stringify(page.data.footer, null, 2));
   return (
     <div className="flex flex-col gap-6 items-center w-full">
-      <div className="flex flex-col items-center justify-center gap-2">
-        <div className="rounded-full relative w-28 h-28 border-0.5 border-stroke">
-          <Image
-            src="/profile.png"
-            alt="Foto de perfil"
-            fill
-            className="dark:block hidden"
-          />
-          <Image
-            src="/profile-light.png"
-            alt="Foto de perfil"
-            fill
-            className="dark:hidden"
-          />
-        </div>
-        <span className="text-md">@juliasilva</span>
-      </div>
+      <Avatar />
       <ModeToggle />
       <div className="min-[540px]:w-lg w-full flex flex-col gap-4">
-        <Button asChild>
-          <Link href="#">Inscreva-se no NLW</Link>
-        </Button>
-        <Button asChild>
-          <Link href="#">Inscreva-se no NLW</Link>
-        </Button>
-        <Button asChild>
-          <Link href="#">Inscreva-se no NLW</Link>
-        </Button>
-        <Button asChild>
-          <Link href="#">Inscreva-se no NLW</Link>
-        </Button>
+        {page.data.botaos.map((botao, index) => (
+          <Button key={index} asChild>
+            <Link href={asLink(botao.link) ?? ""}>{botao.text}</Link>
+          </Button>
+        ))}
       </div>
       <div className="flex items-center gap-6">
-        <Link href="#">
-          <Github className="text-text h-6 w-6" />
-        </Link>
-        <Link href="#">
-          <Instagram className="text-text h-6 w-6" />
-        </Link>
-        <Link href="#">
-          <Youtube className="text-text h-6 w-6" />
-        </Link>
-        <Link href="#">
-          <Linkedin className="text-text h-6 w-6" />
-        </Link>
+        {page.data.redesociais.map((redesocial, index) => (
+          <Link href={asLink(redesocial.link) ?? ""} key={index}>
+            <CMSIcon name={redesocial.text} className="text-text" />
+          </Link>
+        ))}
       </div>
-      <span className="text-text text-sm">Feito com ❤️ pela <Link href="">Rocketseat</Link></span>
+      <Footer />
     </div>
   );
 }

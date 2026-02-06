@@ -1,9 +1,9 @@
-import "../styles/globals.css";
-
 import { Inter } from "next/font/google";
 import Image from "next/image";
 
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/app/providers/theme-provider";
+
+import "../styles/globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,32 +17,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} dark`}>
+    <html lang="pt-BR" className={inter.variable} suppressHydrationWarning>
       <body className="w-full relative flex items-center justify-center h-screen">
-        <main className="flex items-center justify-content-center p-6 h-screen w-full">
-          <Image
-            src="/background-dark.png"
-            alt="Fundo"
-            priority
-            fill
-            className="object-cover absolute -z-10 hidden dark:block"
-          />
-          <Image
-            src="/background-light.png"
-            alt="Fundo"
-            priority
-            fill
-            className="object-cover absolute -z-10 dark:hidden"
-          />
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
+        <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
+          <main className="flex items-center justify-content-center p-6 h-screen w-full">
+            <Image
+              src="/background-dark.png"
+              alt="Fundo"
+              priority
+              fill
+              className="object-cover absolute -z-10 hidden dark:block"
+            />
+
+            <Image
+              src="/background-light.png"
+              alt="Fundo"
+              priority
+              fill
+              className="object-cover absolute -z-10 dark:hidden"
+            />
+
             {children}
-          </ThemeProvider>
-        </main>
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );
