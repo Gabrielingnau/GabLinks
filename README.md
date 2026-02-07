@@ -1,4 +1,4 @@
-# [GabLinks(Link)](https://site-blog-bay.vercel.app/blog)
+# [GabLinks(Link)](https://gab-links.vercel.app/)
 
 DevLinks é um agregador de links responsivo e com troca de tema que você pode usar como cartão de visitas nas suas redes sociais.
 Esse é um dos desafios práticos da formação de Next, um dos conteúdos disponíveis para alunos da Rocketseat. (O layout não esta igual porque eu ja aproveitei e usei esse projeto para ser a minha cnetral de links😁)
