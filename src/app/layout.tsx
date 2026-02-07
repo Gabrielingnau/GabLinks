@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gablinks.com"), // troque pelo domínio real
+  metadataBase: new URL("https://gab-links.vercel.app/"), // troque pelo domínio real
 
   title: {
     default: "GabLinks",
