@@ -1,4 +1,4 @@
-# [GabLinks(Link)](https://gab-links.vercel.app/)
+# [GabLinks(Link)](https://links.gabrielingnau.com)
 
 GabLinks é a minha central de links pessoal — um agregador simples, rápido e responsivo que uso como cartão de visitas online.
 
