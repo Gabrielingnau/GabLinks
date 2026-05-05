@@ -1,7 +1,14 @@
 # [GabLinks(Link)](https://gab-links.vercel.app/)
 
-DevLinks é um agregador de links responsivo e com troca de tema que você pode usar como cartão de visitas nas suas redes sociais.
-Esse é um dos desafios práticos da formação de Next, um dos conteúdos disponíveis para alunos da Rocketseat. (O layout não esta igual porque eu ja aproveitei e usei esse projeto para ser a minha cnetral de links😁)
+GabLinks é a minha central de links pessoal — um agregador simples, rápido e responsivo que uso como cartão de visitas online.
+
+A ideia do projeto foi ter um lugar único para concentrar meus principais links (portfólio, projetos, redes, etc.), com uma interface limpa, suporte a tema claro/escuro e foco em usabilidade.
+
+Além de resolver uma necessidade real minha, também usei esse projeto para trabalhar na organização de layout, componentização e integração com CMS.
+
+## 🎯 Objetivo
+
+Criar uma página leve e funcional que facilite o acesso aos meus links principais, podendo ser compartilhada facilmente em qualquer rede social.
 
 ## 🎨 Layout
 
@@ -29,7 +36,7 @@ git init
 ```
 
 ```
-git clone https://github.com/Gabrielingnau/site-blog.git
+git clone https://github.com/Gabrielingnau/GabLinks.git
 ```
 
 Instale as depêndecias com:
