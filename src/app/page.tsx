@@ -17,9 +17,14 @@ export default async function HomePage() {
       <Avatar />
       <ModeToggle />
       <div className="min-[540px]:w-lg w-full flex flex-col gap-4">
+          <Button asChild>
+            <Link href="/curriculo.pdf" download>
+              Baixe meu curriculo
+            </Link>
+          </Button>
         {page.data.botaos.map((botao, index) => (
           <Button key={index} asChild>
-            <Link href={asLink(botao.link) ?? ""}>{botao.text}</Link>
+            <Link href={asLink(botao.link) ?? ""} target="_blank">{botao.text}</Link>
           </Button>
         ))}
       </div>
